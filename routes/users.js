@@ -23,7 +23,7 @@ router.get("/", async (req, res) => {
                 "pw": item.pw
             }
         })
-        res.status(200).json({ results })
+        res.status(200).json(results)
     }
     catch (err) {
         res.status(400).json({ message: "회원 목록 조회 실패" })
@@ -44,7 +44,7 @@ router.get("/:userid", async (req, res) => {
                 "pw": item.pw
             }
         })
-        res.status(200).json({"User":(results) })
+        res.status(200).json(...result)
     } catch (error) { return res.status(400).json({ message: "회원 상세 조회 실패" }) }
 })
 
