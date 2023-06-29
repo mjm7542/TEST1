@@ -36,7 +36,7 @@ router.get("/:userid", async (req, res) => {
         let users
         users = await Users.find({ _id: userid })
 
-        const results = users.map((item) => {
+        const result = users.map((item) => {
             return {
                 "userId": item._id,
                 "name": item.name,
